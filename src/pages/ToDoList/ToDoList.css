@@ -1,0 +1,155 @@
+h1 {
+    text-align: center;
+    padding: 3rem;
+    font-size: 4rem;
+    text-decoration: underline;
+}
+
+.formAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formAdd label {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.formAdd input {
+    font-size: 1.5rem;
+    padding-left: .5rem;
+    border-radius: 5px;
+}
+
+.formAdd button {
+    border: none;
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
+    margin: .5rem;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+    background-color: rgb(127, 129, 131);
+    color: #fff;
+}
+
+.formAdd button:hover {
+    transform: scale(1.1);
+}
+
+.tittleTask {
+    display: flex;
+    align-items: center;
+}
+
+.listTask {
+    margin: 1rem auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.listTask p {
+    font-size: 1.5rem;
+}
+
+.iconsTask {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+
+
+.iconsTask button {
+    border: none;
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
+    margin: .5rem;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+    color: #fff;
+}
+
+.iconsTask button:hover {
+    transform: scale(1.1);
+}
+
+.check {
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+}
+
+.btnEdit {
+    background-color: rgb(56, 56, 241);
+
+}
+
+.btnDelete {
+    background-color: rgb(241, 56, 56);
+
+}
+
+.divLogout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btnlogout {
+    width: 8rem;
+    border: none;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: .5rem;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+    background-color: rgb(127, 129, 131);
+    color: #fff;
+}
+
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.075);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    background-color: #fff;
+    color: #000;
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+
+}
+
+
+
+
+
+.content {
+    text-align: center;
+    margin-top: 2rem;
+}

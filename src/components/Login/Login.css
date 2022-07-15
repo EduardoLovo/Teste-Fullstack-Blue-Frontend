@@ -1,0 +1,52 @@
+.contentLogin {
+    animation: go-back 1s;
+}
+
+.contentLogin h1 {
+    text-align: center;
+    padding: 3rem;
+    font-size: 4rem;
+    text-decoration: underline;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form #label {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.form input {
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 35rem;
+    margin: 1rem 0 2rem;
+}
+
+.form button {
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 150px;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+
+@keyframes go-back {
+    0% {
+        transform: translateX(-500px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

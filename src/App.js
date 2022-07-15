@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import { Home } from './pages/Home/Home';
+import { JwtHandler } from './jwt-handler/jwt-handler';
+import { ToDoList } from './pages/ToDoList/ToDoList';
+import { Edit } from './pages/Edit/Edit';
 
 function App() {
+
+  const PrivateRoute = ({ children, redirectTo }) => {
+    const isAuthenticated = JwtHandler.isJwtValid();
+    // console.log("isAuh:", isAuthenticated);
+    return isAuthenticated ? children : <Navigate to={redirectTo} />
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route
+          path="/todolist"
+          element={
+            <PrivateRoute redirectTo='/'>
+              <ToDoList />
+            </PrivateRoute>}
+        />
+        <Route
+          path="/editTask/:id"
+          element={
+            <PrivateRoute redirectTo='/'>
+              <Edit />
+            </PrivateRoute>}
+        />
+      </Routes>
     </div>
   );
 }
