@@ -4,7 +4,6 @@ import { Cadastro } from '../../components/Cadastro/Cadastro';
 import './Home.css';
 import { JwtHandler } from '../../jwt-handler/jwt-handler';
 import { Link } from 'react-router-dom';
-import { ToDoList } from '../ToDoList/ToDoList';
 
 export const Home = () => {
 

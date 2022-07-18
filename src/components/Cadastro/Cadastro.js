@@ -1,11 +1,11 @@
 import React from 'react';
 import { Api } from '../../Api/Api';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './Cadastro.css';
 
 export const Cadastro = ({ setDisplay, setStyleCadastro }) => {
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const changeStyle = (event) => {
         event.preventDefault()
@@ -32,8 +32,14 @@ export const Cadastro = ({ setDisplay, setStyleCadastro }) => {
             const data = await response.json();
 
             console.log(data);
+            if (data.msg === 'Por favor utilize outro email') {
+                alert(`Email existente, ${data.msg}`)
+            } else {
+                alert('Cadastro criado com sucesso, volte e faça o login!')
+                navigate('/todolist')
+            }
         } catch (err) {
-            console.log(err, 'erro no cadastro');
+            alert(err)
         }
     }
 
